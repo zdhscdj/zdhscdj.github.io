@@ -1,0 +1,23 @@
+# base
+title:            zdhscdj
+description:      Keep learning forever!
+url:              https://zdhscdj.github.io
+permalink:        pretty
+timezone:         Asia/Shang_Hai
+
+
+# Sidebar settings
+sidebar: true
+sidebar-about-description: "Take it down!"
+
+# SNS settings
+RSS: true
+weibo_username:     username
+zhihu_username:     username
+github_username:    zdhscdj
+
+sass:
+  sass_dir: assets
+  style: :compressed
+collections:
+  - notes
