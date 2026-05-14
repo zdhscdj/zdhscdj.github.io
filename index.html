@@ -2,49 +2,94 @@
 layout: default
 ---
 
-  <h2 class="heading">Study</h2>
-  <ul class="list list-items">
+<section class="hero fade-in">
+  <p class="hero-greeting">👋 你好，我是</p>
+  <h1 class="hero-title">zdhscdj</h1>
+  <p class="hero-subtitle">后端开发工程师 · 坐标北京<br>专注于系统编程与高性能服务开发</p>
+  <div class="hero-badges">
+    <span class="hero-badge">🎓 UCAS 硕士</span>
+    <span class="hero-badge">💻 后端开发</span>
+    <span class="hero-badge">📍 北京</span>
+    <span class="hero-badge">🛠 Vimer</span>
+  </div>
+</section>
+
+<div class="sections-grid fade-in stagger-1">
+  <div class="section-card">
+    <h2 class="section-title"><span class="section-title-icon">🎓</span> 教育背景</h2>
+    <ul class="info-list">
+      <li>
+        <div>
+          硕士 · 计算机科学 · 中国科学院大学
+          <div class="info-detail">研究方向：深度学习 / 计算机视觉</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="section-card">
+    <h2 class="section-title"><span class="section-title-icon">💼</span> 工作</h2>
+    <ul class="info-list">
+      <li>
+        <div>
+          后端开发工程师
+          <div class="info-detail">2020 年至今 · 北京</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="section-card fade-in stagger-2">
+  <h2 class="section-title"><span class="section-title-icon">⚡</span> 技术栈</h2>
+  <div class="tech-tags">
+    <span class="tech-tag">C</span>
+    <span class="tech-tag">C++</span>
+    <span class="tech-tag">Go</span>
+    <span class="tech-tag">Shell</span>
+    <span class="tech-tag">Vim</span>
+    <span class="tech-tag">Linux</span>
+    <span class="tech-tag">Deep Learning</span>
+    <span class="tech-tag">Computer Vision</span>
+  </div>
+</div>
+
+<div class="section-card fade-in stagger-3">
+  <h2 class="section-title"><span class="section-title-icon">🚀</span> 开源项目</h2>
+  <ul class="info-list">
     <li>
-    <li>Master,Computer Science,UCAS.</li>
-      <div class="small">Deep learning,Computer Vision</div>
+      <div>
+        <a href="https://github.com/zdhscdj">GitHub 主页</a>
+        <div class="info-detail">查看我的开源项目和代码贡献</div>
+      </div>
     </li>
   </ul>
+</div>
 
-  <h2 class="heading">Work</h2>
-  <ul class="list list-items">
-    <li>Privacy.</li>
-  </ul>
-  
-  <h2 class="heading">Side Projects</h2>
-  <ul class="list list-items">
-      <li><a href="https://github.com/zdhscdj">Click me to know more about information.</a></li>
-  </ul>
+<div class="section-card fade-in stagger-4">
+  <h2 class="section-title"><span class="section-title-icon">📬</span> 联系方式</h2>
+  <div class="contact-grid">
+    <a href="https://github.com/zdhscdj" class="contact-link" target="_blank" rel="me">
+      <span class="contact-icon">🐙</span> GitHub
+    </a>
+    <a href="mailto:15184842190@163.com" class="contact-link">
+      <span class="contact-icon">✉️</span> Email
+    </a>
+  </div>
+</div>
 
-  <h2 class="heading">About me</h2>
-  <ul class="list list-items">
-    <li>Based in Beijing since 2020.</li>
-    <li>Work in C/C++/Go/Shell, a Vimer.</li>
-    <li>A back-end developer.</li>
-  </ul>
-
-  <h2 class="heading">Hyperlinks &amp; contact</h2>
-  <ul class="list list-items">
-    <li>
-      <mark><a href="https://github.com/zdhscdj" rel="me">GitHub</a></mark>
-    </li>
-    <li>Email:15184842190@163.com</li>
-  </ul>
-  
-  <h2 class="heading">Posts</h2><a class="small" href="/notes.xml">[feed]</a>
+<div class="section-card fade-in stagger-5">
+  <h2 class="section-title"><span class="section-title-icon">📝</span> 最新动态 <a class="small" href="/notes.xml" style="margin-left: auto;">[feed]</a></h2>
   <ul class="list-notes">
     {% for note in site.data.notes limit: 5 %}
       <li class="note">
-        <time class="small">{{ note.date | date: "%b %d, %Y" }}</time> <a href="/notes#date-{{ note.date | date: "%Y-%m-%d" }}{{ note.slug }}" class="small">#</a>
+        <time class="small">{{ note.date | date: "%b %d, %Y" }}</time>
+        <a href="/notes#date-{{ note.date | date: "%Y-%m-%d" }}{{ note.slug }}" class="small">#</a>
         <div>{{ note.content | markdownify }}</div>
       </li>
     {% endfor %}
   </ul>
-
-{% if site.data.notes.size > 5 %}
-  <li class="note"><a class="small" href="/notes">More...</a></li>
-{% endif %}
+  {% if site.data.notes.size > 5 %}
+    <a class="small" href="/notes">查看更多 →</a>
+  {% endif %}
+</div>
